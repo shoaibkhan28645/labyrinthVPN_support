@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Outfit", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .support {
+        max-width: 400px;
+        margin: 20px auto;
+      }
+      .support h2 {
+        text-align: center;
+      }
+      .support-item {
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .support-item:last-child {
+        border-bottom: none;
+      }
+      .support-item .title {
+        display: flex;
+        align-items: center;
+      }
+      .support-item .title span {
+        flex-grow: 1;
+      }
+      .support-item .title .arrow {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #333;
+        transition: transform 0.3s;
+      }
+      .support-item.active .title .arrow {
+        transform: rotate(180deg);
+      }
+      .support-item .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+      }
+      .support-item.active .content {
+        max-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="support">
+      <div class="support-item">
+        <div class="title">
+          <span>Account and Billing</span>
+          <div class="arrow"></div>
+        </div>
+        <div class="content">
+          <p>Information about account and billing.</p>
+        </div>
+      </div>
+      <div class="support-item">
+        <div class="title">
+          <span>General Information</span>
+          <div class="arrow"></div>
+        </div>
+        <div class="content">
+          <p>General information about the service.</p>
+        </div>
+      </div>
+      <div class="support-item">
+        <div class="title">
+          <span>Connection</span>
+          <div class="arrow"></div>
+        </div>
+        <div class="content">
+          <p>Information about connection issues.</p>
+        </div>
+      </div>
+      <div class="support-item">
+        <div class="title">
+          <span>Access</span>
+          <div class="arrow"></div>
+        </div>
+        <div class="content">
+          <p>Information about accessing the service.</p>
+        </div>
+      </div>
+      <div class="support-item">
+        <div class="title">
+          <span>Getting Started</span>
+          <div class="arrow"></div>
+        </div>
+        <div class="content">
+          <p>Guide on getting started with the service.</p>
+        </div>
+      </div>
+      <div class="support-item">
+        <div class="title">
+          <span>Speed</span>
+          <div class="arrow"></div>
+        </div>
+        <div class="content">
+          <p>Information about service speed and performance.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const supportItems = document.querySelectorAll(".support-item");
+
+      supportItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -23,7 +23,7 @@
       }
       .support-item {
         border-bottom: 1px solid #ccc;
-        padding: 10px;
+        padding: 20px;
         cursor: pointer;
       }
       .support-item:last-child {
@@ -35,6 +35,7 @@
       }
       .support-item .title span {
         flex-grow: 1;
+        font-weight: bold;
       }
       .support-item .title .arrow {
         width: 0;
@@ -53,7 +54,7 @@
         transition: max-height 0.3s;
       }
       .support-item.active .content {
-        max-height: 200px;
+        max-height: fit-content;
       }
     </style>
   </head>
@@ -61,38 +62,102 @@
     <div class="support">
       <div class="support-item">
         <div class="title">
-          <span>Account and Billing</span>
+          <span>How to use LabyrinthVPN</span>
           <div class="arrow"></div>
         </div>
         <div class="content">
-          <p>Information about account and billing.</p>
+          <p>
+            To use LabyrinthVPN, tap the "Connect" button on the Home Screen. If
+            the Android system prompts you for connection permission, tap "OK"
+            or "Accept" to proceed.
+          </p>
         </div>
       </div>
       <div class="support-item">
         <div class="title">
-          <span>General Information</span>
+          <span>How long can I stay connected with LabyrinthVPN?</span>
           <div class="arrow"></div>
         </div>
         <div class="content">
-          <p>General information about the service.</p>
+          <p>
+            For as long as you like! We don't impose any time or data limits on
+            each connection.
+          </p>
         </div>
       </div>
       <div class="support-item">
         <div class="title">
-          <span>Connection</span>
+          <span
+            >Why can't I use the internet after the connection is
+            established?</span
+          >
           <div class="arrow"></div>
         </div>
         <div class="content">
-          <p>Information about connection issues.</p>
+          <p>
+            First, check your network connection. Next, ensure that you've
+            disabled battery optimization for LabyrinthVPN in Android's battery
+            settings (allowing background activity for LabyrinthVPN).
+          </p>
         </div>
       </div>
       <div class="support-item">
         <div class="title">
-          <span>Access</span>
+          <span>How do I disable battery optimization for LabyrinthVPN?</span>
           <div class="arrow"></div>
         </div>
         <div class="content">
-          <p>Information about accessing the service.</p>
+          <ul>
+            <li>
+              <span>For most Android devices:</span>
+              <ol>
+                <li>Open Android's <b>Settings</b>.</li>
+                <li>Navigate to <b>Battery > Battery optimization</b>.</li>
+                <li>Select <b>All apps</b> from the dropdown menu.</li>
+                <li>
+                  Find <b>LabyrinthVPN</b> and set it to <b>Don't optimize</b>.
+                </li>
+              </ol>
+            </li>
+            <li>
+              <span>For Huawei devices:</span>
+              <ol>
+                <li>Open Android's <b>Settings</b>.</li>
+                <li>Navigate to <b>Battery > Launch</b>.</li>
+                <li>Find <b></b> in the app list.</li>
+                <li>Switch to <b>Manage manually</b>.</li>
+                <li>Enable <b>Auto-launch</b> and <b>Run in background</b>.</li>
+                <li>
+                  Alternatively, check the <b>Protected Apps</b> setting for
+                  battery options.
+                </li>
+              </ol>
+            </li>
+            <li>
+              <span>For Samsung devices:</span>
+              <ol>
+                <li>Open Android's <b>Settings</b>.</li>
+                <li>
+                  Navigate to <b>Battery > App Power Saving > Details</b>.
+                </li>
+                <li>
+                  Find <b>LabyrinthVPN</b> in the app list and disable power
+                  saving for it.
+                </li>
+              </ol>
+            </li>
+            <li>
+              <span>For other devices:</span>
+              <ol>
+                <li>Open Android's <b>Settings</b>.</li>
+                <li>Navigate to <b>Battery</b>.</li>
+                <li>
+                  Look for options such as <b>Background activity</b> or
+                  <b>Protected apps</b>.
+                </li>
+              </ol>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="support-item">

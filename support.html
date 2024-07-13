@@ -32,6 +32,7 @@
       .support-item .title {
         display: flex;
         align-items: center;
+        cursor: pointer;
       }
       .support-item .title span {
         flex-grow: 1;
@@ -137,7 +138,7 @@
               <ol>
                 <li>Open Android's <b>Settings</b>.</li>
                 <li>Navigate to <b>Battery > Launch</b>.</li>
-                <li>Find <b></b> in the app list.</li>
+                <li>Find <b>LabyrinthVPN</b> in the app list.</li>
                 <li>Switch to <b>Manage manually</b>.</li>
                 <li>Enable <b>Auto-launch</b> and <b>Run in background</b>.</li>
                 <li>
@@ -176,10 +177,11 @@
     </div>
 
     <script>
-      const supportItems = document.querySelectorAll(".support-item");
+      const supportItems = document.querySelectorAll(".support-item .title");
 
-      supportItems.forEach((item) => {
-        item.addEventListener("click", () => {
+      supportItems.forEach((title) => {
+        title.addEventListener("click", () => {
+          const item = title.parentElement;
           item.classList.toggle("active");
         });
       });
